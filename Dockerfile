@@ -19,20 +19,10 @@ COPY . /workspace
 RUN npm install -g gulp
 RUN npm install
 
-EXPOSE 3000
-EXPOSE 3001
-
-RUN gulp start
+RUN gulp build
 
 FROM nginx:1.11.4-alpine
-# RUN adduser -D -u 10000 rapsodia
 
-# RUN chgrp -R rapsodia /etc/nginx /var/cache/nginx /var/run && \
-#     chmod -R 775 /etc/nginx /var/cache/nginx /var/run/
-
-# USER 10000
-
-COPY ./docker/nginx.conf /etc/nginx/
 COPY ./docker/default.conf /etc/nginx/conf.d/
 COPY ./package.json /usr/share/nginx/
 COPY ./docker /usr/share/nginx/docker
