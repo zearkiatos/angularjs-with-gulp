@@ -11,15 +11,18 @@ RUN mkdir -p dist && apk --no-cache --virtual .build-deps add \
 	ncftp \
 	curl \
 	zip
-RUN curl -Ls https://github.com/fgrehm/docker-phantomjs2/releases/download/v2.0.0-20150722/dockerized-phantomjs.tar.gz | tar xz -C /
 
 # COPY FILES
 WORKDIR /workspace
 COPY . /workspace
 
+RUN npm install -g gulp
 RUN npm install
 
-RUN gulp build
+EXPOSE 3000
+EXPOSE 3001
+
+RUN gulp start
 
 FROM nginx:1.11.4-alpine
 # RUN adduser -D -u 10000 rapsodia
