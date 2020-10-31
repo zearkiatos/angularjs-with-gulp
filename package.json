@@ -1,0 +1,22 @@
+{
+  "name": "angularjs-with-gulp",
+  "version": "1.0.0",
+  "description": "This project is for deploy an angularjs 🅰️ legacy application with gulp 🥤",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zearkiatos/angularjs-with-gulp.git"
+  },
+  "author": "Pedro Capriles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zearkiatos/angularjs-with-gulp/issues"
+  },
+  "homepage": "https://github.com/zearkiatos/angularjs-with-gulp#readme",
+  "dependencies": {
+    "angular": "^1.8.2"
+  }
+}
