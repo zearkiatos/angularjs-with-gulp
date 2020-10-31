@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/zearkiatos/angularjs-with-gulp#readme",
   "dependencies": {
-    "angular": "^1.8.2"
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
   }
 }
